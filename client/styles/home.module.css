@@ -1,0 +1,12 @@
+.on{
+    background-color: indigo;
+    width: 300px;
+    padding: 0 2em 0 0 ;
+}
+
+.shayo{
+    display: flex;
+}
+.shayo h1{
+    font-size: 40px;
+}
