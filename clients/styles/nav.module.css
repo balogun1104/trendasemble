@@ -1,0 +1,87 @@
+.nav {
+  width: 100%;
+  background-color: #007bff;
+  height: 70px;
+  left: 0%;
+  padding: 0 1em;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding-left: 1em;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.logo P {
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.logo p:hover {
+  background-color: #005bf5;
+  color: #fff;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+.side {
+  width: 400px;
+  height: 100%;
+  position: fixed;
+  background-color: #007bff;
+}
+.side ul {
+  padding: 0;
+  margin: 7em 0 2em;
+}
+.side ul li {
+  list-style: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2em;
+  width: 90%;
+  padding: 10px;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+}
+.side ul li:hover{
+    background: linear-gradient(rgba(0,91,245, 0.7), rgba(0,91,245, 0.7));
+
+}
+
+.search {
+  display: block;
+  width: 500px;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+}
+.search input {
+  height: 100%;
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+}

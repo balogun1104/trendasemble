@@ -6,7 +6,11 @@ import Sidebar from "../components/Sidebar";
 
 const Home: NextPage = () => {
 
+    const [change, setChange] = useState("1");
 
+    const click = (e: any) => {
+      setChange(e.target.id);
+    };
 
 
   return (
@@ -18,10 +22,10 @@ const Home: NextPage = () => {
       <main>
         {/* sidebar */}
 
-        <Sidebar/>
+        <Sidebar  />
 
         {/* feeds */}
-
+        <Main/>
       </main>
     </div>
   );
