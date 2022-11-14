@@ -41,11 +41,27 @@
   position: fixed;
   background-color: #007bff;
 }
+
 .side ul {
   padding: 0;
   margin: 7em 0 2em;
 }
-.side ul li {
+.side ul .off {
+  list-style: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 2em;
+  width: 90%;
+  padding: 10px;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+}
+.side ul .off:hover {
+  color: #fff;
+  background: linear-gradient(rgba(0, 91, 245, 0.7), rgba(0, 91, 245, 0.7));
+}
+.side ul .on {
   list-style: none;
   font-size: 30px;
   font-weight: bold;
@@ -55,10 +71,7 @@
   padding: 10px;
   border-radius: 0 50px 50px 0;
   cursor: pointer;
-}
-.side ul li:hover{
-    background: linear-gradient(rgba(0,91,245, 0.7), rgba(0,91,245, 0.7));
-
+  background: linear-gradient(rgba(0, 91, 245, 0.7), rgba(0, 91, 245, 0.7));
 }
 
 .search {

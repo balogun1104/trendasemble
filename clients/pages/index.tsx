@@ -1,21 +1,26 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import InstaTrend from '../components/instaTrend'
+import Head from "next/head";
+import Image from "next/image";
+import InstaTrend from "../components/instaTrend";
 import SideNav from "../components/sideNav";
-import Nav from '../components/Nav'
-import styles from '../styles/Home.module.css'
-import { useState } from 'react';
+import Nav from "../components/Nav";
+import styles from "../styles/Home.module.css";
+import { useState } from "react";
+import TwitterTrend from "../components/twitterTrend";
+import TiktokTrend from "../components/tiktokTrend";
+import GoogleTrend from "../components/googleTrends";
+
+interface PTypes {
+  click:() => string;
+  change: string;
+}
 
 export default function Home() {
   const [change, setChange] = useState("1");
 
-  const click:any = (e: any) => {
+  const click: any = (e: any) => {
     setChange(e.target.id);
   };
-   
-  interface PTypes {
-    click: any
-  }
+  console.log(click.value)
 
 
   return (
@@ -29,8 +34,19 @@ export default function Home() {
       <main className={styles.main}>
         <Nav />
         <div className={styles.home}>
-          <SideNav/>
-          <InstaTrend />
+          <SideNav click={click} change={change} />
+
+          {change === "2" ? (
+            <TwitterTrend />
+          ) : change === "3" ? (
+            <TiktokTrend />
+          ) : change === "4" ? (
+            <GoogleTrend />
+          ) : (
+            <InstaTrend />
+          )}
+
+          {/* <InstaTrend /> */}
         </div>
       </main>
     </div>
