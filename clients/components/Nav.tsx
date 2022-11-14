@@ -13,7 +13,7 @@ const Nav = () => {
         </div>
 
         <div className={style.search}>
-          <input type="text" />
+          <input type="text" placeholder="search"/>
         </div>
       </div>
     </div>

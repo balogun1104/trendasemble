@@ -5,3 +5,13 @@
     left: 400px;
     
 }
+
+.header {
+    font-weight: 400;
+    text-align: center;
+    padding-right: 100px;
+    display: flex;
+}
+.header span {
+    font-weight: 100;
+}https://razak1104-zany-halibut-7w9pvpggvwp3pgjg-3000.preview.app.github.dev/
