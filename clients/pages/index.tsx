@@ -46,7 +46,6 @@ export default function Home() {
             <InstaTrend />
           )}
 
-          {/* <InstaTrend /> */}
         </div>
       </main>
     </div>
