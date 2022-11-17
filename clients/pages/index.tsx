@@ -8,7 +8,6 @@ import TwitterTrend from "../components/twitterTrend";
 import TiktokTrend from "../components/tiktokTrend";
 import GoogleTrend from "../components/googleTrends";
 import { QueryCache, useQuery, QueryClientProvider, QueryClient} from 'react-query'
-import {ReactQueryDevtools} from 'react-query-devtools'
 import {GetServerSideProps} from 'next'
 
 interface PTypes {
@@ -26,8 +25,14 @@ interface PTypes {
 
 
 
-export default function Home( { data} ) {
-  console.log(data)
+// {
+//   data;
+// }
+
+
+
+export default function Home(  ) {
+  // console.log(data)
   const [change, setChange] = useState("1");
 
   const click: any = (e: any) => {
@@ -73,15 +78,3 @@ export default function Home( { data} ) {
   );
 }
 
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
-  const data =  await res.json()
-  console.log(data)
-
-  return {
-    props: {
-      data
-    }
-  }
-}

@@ -1,5 +1,8 @@
 import style from '../styles/trend.module.css'
-import { Instadata } from './data/Data';
+import data from '../components/data/Data';
+
+
+const insta:any = () => data();
 
 export  function InstaTrend() {
  
@@ -17,7 +20,18 @@ export  function InstaTrend() {
       <div className={style.arrow}>
         arrow
       </div>
+       
       </div>
+
+     {
+       insta.map((info: any) => {
+         return(
+              <div>
+                {info.name}
+              </div>
+         )
+       })
+     }
 
     </div>
   )

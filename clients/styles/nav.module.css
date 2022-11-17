@@ -36,8 +36,8 @@
   transition: all 0.3s ease;
 }
 .side {
-  width: 20%;
-  height: 80%;
+  width: 400px;
+  height: 100%;
   position: fixed;
   background-color: #0a3767;
 
