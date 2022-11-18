@@ -38,8 +38,8 @@
 .side {
   width: 400px;
   height: 100%;
-  position: fixed;
   background-color: #0a3767;
+  min-height: 100vh;
 
 }
 

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { InstaTrend } from "../components/instaTrend";
+import  InstaTrend  from "../components/instaTrend";
 import SideNav from "../components/sideNav";
 import Nav from "../components/Nav";
 import styles from "../styles/Home.module.css";
@@ -7,31 +7,27 @@ import { useState } from "react";
 import TwitterTrend from "../components/twitterTrend";
 import TiktokTrend from "../components/tiktokTrend";
 import GoogleTrend from "../components/googleTrends";
-import { QueryCache, useQuery, QueryClientProvider, QueryClient} from 'react-query'
 import {GetServerSideProps} from 'next'
+
+
+export const getStaticProps = async () => {
+   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+   const data = await res.json();
+
+   return {
+    props: {infos : data}
+   }
+}
 
 interface PTypes {
   click:() => string;
   change: string;
+  infos: any;
   info: any;
 }
 
-// const queryClient = new QueryClient()
 
-// const toJSON = (_: Response) => _.json() 
-
-// const fetecher = () => fetch('https://jsonplaceholder.typicode.com/posts').then(toJSON);
-
-
-
-
-// {
-//   data;
-// }
-
-
-
-export default function Home(  ) {
+ const Home: React.FC<PTypes> = ( {infos, info} ) => {
   // console.log(data)
   const [change, setChange] = useState("1");
 
@@ -40,14 +36,10 @@ export default function Home(  ) {
   };
   console.log(click.value)
 
-  // const {data: information, isLoading, error} =useQuery('information', fetecher)
 
-  // if(isLoading) return 'Loading...'
-  // if(error) return console.log(error)
-  // console.log(information)
 
   return (
-    // <QueryClientProvider client={queryClient} contextSharing={true}>
+   
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -67,14 +59,13 @@ export default function Home(  ) {
           ) : change === "4" ? (
             <GoogleTrend />
           ) : (
-            <InstaTrend />
+            <InstaTrend infos={infos}/>
           )}
-
         </div>
-        {/* <ReactQueryDevtools /> */}
       </main>
     </div>
-    // </QueryClientProvider>
   );
 }
+
+export default Home
 

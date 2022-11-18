@@ -1,7 +1,7 @@
 .main {
     width: calc(100% - 400px);
     height: 100%;
-    position: fixed;
+    
     left: 400px;
     
 }
@@ -25,3 +25,31 @@
 .arrow{
     margin-left: 40px ;
 }
+
+.datalist{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+
+}
+
+.datalist::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  .datalist::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  /* Handle */
+  .datalist::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 0;
+  }
+  
+  /* Handle on hover */
+  .datalist::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }

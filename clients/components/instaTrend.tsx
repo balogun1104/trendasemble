@@ -1,10 +1,17 @@
-import style from "../styles/trend.module.css";
-import data from "../components/data/Data";
+import style from '../styles/trend.module.css'
 
 const insta: any = Array.isArray(data());
 console.log(insta)
 
-export function InstaTrend() {
+
+interface PTypes {
+  infos: any;
+
+}
+
+const InstaTrend: React.FC<PTypes> = ({infos}) => {
+// console.log(infos.title)
+
   return (
     <div className={style.main}>
       <div className={style.header}>
@@ -24,10 +31,17 @@ export function InstaTrend() {
         </div>
         <div className={style.arrow}>arrow</div>
       </div>
-
-      {insta.map((info: any) => {
-        return <div>{info.name}</div>;
-      })}
+      </div>
+      {/* Data section */}
+      <div className={style.datalist}>
+        {
+          infos.map((info: any) => (
+            <div key={info.id}>
+              <h3>{info.title}</h3>
+            </div>
+          ))
+        } </div>
     </div>
-  );
-}
+  )}
+  export default InstaTrend
+
