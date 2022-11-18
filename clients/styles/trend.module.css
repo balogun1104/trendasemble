@@ -1,55 +1,57 @@
 .main {
-    width: calc(100% - 400px);
-    height: 100%;
-    
-    left: 400px;
-    
+  width: calc(100% - 800px);
+  height: 100%;
+  max-height: 100vh;
+         margin: 12em auto 2em;
 }
 
 .header {
-    font-weight: 400;
-    text-align: center;
-    padding-right: 100px;
-    display: flex;
+  font-weight: 400;
+  text-align: center;
+  padding-right: 100px;
+  display: flex;
 }
 .header span {
-    font-weight: 100;
+  font-weight: 100;
 }
 .section2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 65vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.arrow{
-    margin-left: 40px ;
+.arrow {
+  margin-left: 40px;
 }
 
-.datalist{
-    height: 100%;
-    width: 100%;
-    overflow-y: scroll;
-
+.datalist {
+  height: 100%;
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: scroll;
+  border: 2px solid #000;
+  margin: auto;
+  padding: 0em 0.5em;
 }
 
 .datalist::-webkit-scrollbar {
-    width: 0px;
-  }
-  
-  /* Track */
-  .datalist::-webkit-scrollbar-track {
-    box-shadow: none;
-    border-radius: 0;
-  }
-  
-  /* Handle */
-  .datalist::-webkit-scrollbar-thumb {
-    background: white;
-    border-radius: 0;
-  }
-  
-  /* Handle on hover */
-  .datalist::-webkit-scrollbar-thumb:hover {
-    background: #ffffff;
-  }
+  width: 0px;
+}
+
+/* Track */
+.datalist::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Handle */
+.datalist::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 0;
+}
+
+/* Handle on hover */
+.datalist::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}

@@ -1,16 +1,11 @@
-import style from '../styles/trend.module.css'
-
-const insta: any = Array.isArray(data());
-console.log(insta)
-
+import style from "../styles/trend.module.css";
 
 interface PTypes {
   infos: any;
-
 }
 
-const InstaTrend: React.FC<PTypes> = ({infos}) => {
-// console.log(infos.title)
+const InstaTrend: React.FC<PTypes> = ({ infos }) => {
+  // console.log(infos.title)
 
   return (
     <div className={style.main}>
@@ -31,17 +26,15 @@ const InstaTrend: React.FC<PTypes> = ({infos}) => {
         </div>
         <div className={style.arrow}>arrow</div>
       </div>
-      </div>
       {/* Data section */}
       <div className={style.datalist}>
-        {
-          infos.map((info: any) => (
-            <div key={info.id}>
-              <h3>{info.title}</h3>
-            </div>
-          ))
-        } </div>
+        {infos.map((info: any) => (
+          <div key={info.id}>
+            <h3>{info.title}</h3>
+          </div>
+        ))}
+      </div>
     </div>
-  )}
-  export default InstaTrend
-
+  );
+};
+export default InstaTrend;

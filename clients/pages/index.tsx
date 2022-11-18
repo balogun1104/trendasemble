@@ -1,5 +1,5 @@
 import Head from "next/head";
-import  InstaTrend  from "../components/instaTrend";
+import InstaTrend from "../components/instaTrend";
 import SideNav from "../components/sideNav";
 import Nav from "../components/Nav";
 import styles from "../styles/Home.module.css";
@@ -7,39 +7,34 @@ import { useState } from "react";
 import TwitterTrend from "../components/twitterTrend";
 import TiktokTrend from "../components/tiktokTrend";
 import GoogleTrend from "../components/googleTrends";
-import {GetServerSideProps} from 'next'
-
+import { GetServerSideProps } from "next";
 
 export const getStaticProps = async () => {
-   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-   const data = await res.json();
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
 
-   return {
-    props: {infos : data}
-   }
-}
+  return {
+    props: { infos: data },
+  };
+};
 
 interface PTypes {
-  click:() => string;
+  click: () => string;
   change: string;
   infos: any;
   info: any;
 }
 
-
- const Home: React.FC<PTypes> = ( {infos, info} ) => {
+const Home: React.FC<PTypes> = ({ infos, info }) => {
   // console.log(data)
   const [change, setChange] = useState("1");
 
   const click: any = (e: any) => {
     setChange(e.target.id);
   };
-  console.log(click.value)
-
-
+  console.log(click.value);
 
   return (
-   
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -48,9 +43,9 @@ interface PTypes {
       </Head>
 
       <main className={styles.main}>
-        <Nav />
+        <Nav click={click} change={change} />
         <div className={styles.home}>
-          <SideNav click={click} change={change} />
+          {/* <SideNav click={click} change={change} /> */}
 
           {change === "2" ? (
             <TwitterTrend />
@@ -59,13 +54,12 @@ interface PTypes {
           ) : change === "4" ? (
             <GoogleTrend />
           ) : (
-            <InstaTrend infos={infos}/>
+            <InstaTrend infos={infos} />
           )}
         </div>
       </main>
     </div>
   );
-}
+};
 
-export default Home
-
+export default Home;
