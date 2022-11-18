@@ -1,11 +1,15 @@
 import style from '../styles/trend.module.css'
-import data from '../components/data/Data';
 
 
-const insta:any = () => data();
 
-export  function InstaTrend() {
- 
+interface PTypes {
+  infos: any;
+
+}
+
+const InstaTrend: React.FC<PTypes> = ({infos}) => {
+// console.log(infos.title)
+
   return (
     <div className={style.main}>
       <div className=  {style.header}>
@@ -20,41 +24,17 @@ export  function InstaTrend() {
       <div className={style.arrow}>
         arrow
       </div>
-       
       </div>
-
-     {
-       insta.map((info: any) => {
-         return(
-              <div>
-                {info.name}
-              </div>
-         )
-       })
-     }
-
+      {/* Data section */}
+      <div className={style.datalist}>
+        {
+          infos.map((info: any) => (
+            <div key={info.id}>
+              <h3>{info.title}</h3>
+            </div>
+          ))
+        } </div>
     </div>
-  )
-  }
+  )}
+  export default InstaTrend
 
-
-
-
-// (
-//   <div className={style.main}>
-//     <div className={style.header}>
-//       <p>Instagram Trend <span>Worldwide</span></p>
-//     </div>
-//     <div className='sectionTwo'>
-//       <div className={style.input}>
-//         <input  />
-//         <span>icon</span>
-//       </div>
-//       <div>arrow</div>
-//     </div>
-    
-//     <div>
-      
-//     </div>
-//   </div>
-// )
