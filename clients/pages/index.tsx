@@ -7,6 +7,8 @@ import { useState } from "react";
 import TwitterTrend from "../components/twitterTrend";
 import TiktokTrend from "../components/tiktokTrend";
 import GoogleTrend from "../components/googleTrends";
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { GetServerSideProps } from "next";
 
 export const getStaticProps = async () => {
@@ -44,19 +46,41 @@ const Home: React.FC<PTypes> = ({ infos, info }) => {
 
       <main className={styles.main}>
         <Nav click={click} change={change} />
-        <div className={styles.home}>
-          {/* <SideNav click={click} change={change} /> */}
+        <div className="container">
+          <div className={styles.mainWrapper}>
+          <div className="row">
+            {/* left */}
+            <div className="col-2">
+              <p>Google Ads</p>
+            </div>
+            {/* middle */}
+            <div className="col-8">
+              <div className={styles.middleSection}>
+                <div className={styles.home}>
+                  {/* <SideNav click={click} change={change} /> */}
 
-          {change === "2" ? (
-            <TwitterTrend />
-          ) : change === "3" ? (
-            <TiktokTrend />
-          ) : change === "4" ? (
-            <GoogleTrend />
-          ) : (
-            <InstaTrend infos={infos} />
-          )}
+                  {change === "2" ? (
+                    <TwitterTrend />
+                  ) : change === "3" ? (
+                    <TiktokTrend />
+                  ) : change === "4" ? (
+                    <GoogleTrend />
+                  ) : (
+                    <InstaTrend infos={infos} />
+                  )}
+                </div>
+              </div>
+
+            </div>
+            {/* right */}
+            <div className="col-2">
+              <p>Good;e</p>
+            </div>
+          </div>
+          </div>
+
         </div>
+
       </main>
     </div>
   );

@@ -41,6 +41,13 @@ const Nav: React.FC<PTypes> = ({ click, change }) => {
             >
               #Google Search Trends
             </li>
+            <li
+              id="5"
+              className={change === "5" ? style.on : style.off}
+              onClick={click}
+            >
+              #Trending News
+            </li>
           </ul>
         </div>
 
