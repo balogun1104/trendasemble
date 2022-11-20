@@ -18,28 +18,32 @@ const Nav: React.FC<PTypes> = ({ click, change }) => {
               className={change === "1" ? style.on : style.off}
               onClick={click}
             >
-              #Instagram Trends
+              <img src="/instagram.svg" alt="" className={style.svgs} />
+              Instagram Trends
             </li>
             <li
               id="2"
               className={change === "2" ? style.on : style.off}
               onClick={click}
             >
-              #Twitter Trends
+              <img src="/twitter.svg" alt="" className={style.svgs} />
+              Twitter Trends
             </li>
             <li
               id="3"
               className={change === "3" ? style.on : style.off}
               onClick={click}
             >
-              #Tiktok Trends
+              <img src="/tiktok.svg" alt="" className={style.svgs} />
+              Tiktok Trends
             </li>
             <li
               id="4"
               className={change === "4" ? style.on : style.off}
               onClick={click}
             >
-              #Google Search Trends
+              <img src="/google.png" alt="" className={style.svgs} />
+              Google Search Trends
             </li>
             <li
               id="5"
