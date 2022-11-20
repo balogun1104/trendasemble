@@ -19,7 +19,7 @@ const Nav: React.FC<PTypes> = ({ click, change }) => {
               onClick={click}
             >
               <img src="/instagram.svg" alt="" className={style.svgs} />
-              Instagram Trends
+               Trends
             </li>
             <li
               id="2"
@@ -27,7 +27,7 @@ const Nav: React.FC<PTypes> = ({ click, change }) => {
               onClick={click}
             >
               <img src="/twitter.svg" alt="" className={style.svgs} />
-              Twitter Trends
+              Trends
             </li>
             <li
               id="3"
@@ -35,7 +35,7 @@ const Nav: React.FC<PTypes> = ({ click, change }) => {
               onClick={click}
             >
               <img src="/tiktok.svg" alt="" className={style.svgs} />
-              Tiktok Trends
+             Trends
             </li>
             <li
               id="4"
@@ -43,7 +43,7 @@ const Nav: React.FC<PTypes> = ({ click, change }) => {
               onClick={click}
             >
               <img src="/google.png" alt="" className={style.svgs} />
-              Google Search Trends
+               Search Trends
             </li>
             <li
               id="5"
