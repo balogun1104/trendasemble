@@ -1,5 +1,5 @@
 import style from "../styles/nav.module.css";
-import { BsSearch } from "react-icons/bs";
+
 
 interface PTypes {
   click: () => string;
