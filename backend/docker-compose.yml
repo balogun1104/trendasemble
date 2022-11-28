@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: python /BACK/manage.py runserver 0.0.0.0:8000 --settings=config.settings.settingsx
+    volumes:
+      - .:/BACK
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - "DJANGO_SECRET_KEY=django-insecure-g0&g)e1r)you7mex_c#@mxjm1#iyup9-cj_a)650)f+i2a%y$x"
+      - "DJANGO_DEBUG=True"
+  db:
+    image: postgres:14.3
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
+volumes:
+  postgres_data:
