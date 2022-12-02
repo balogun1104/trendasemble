@@ -34,7 +34,7 @@ const Home: React.FC<PTypes> = ({ infos, info }) => {
   const click: any = (e: any) => {
     setChange(e.target.id);
   };
-  console.log(click.value);
+  console.log(change);
 
   return (
     <div className={styles.container}>
